@@ -1,0 +1,120 @@
+body
+{	
+	background-color: #cbc8eb;
+	text-align:center;
+	width:100%;
+	height:100%;
+}
+div.container
+{
+	width:1200px;
+}
+img.title
+{
+	position:absolute;
+	margin-left:-115.5;
+	left: 50%;
+}
+div.tablet
+{
+	height: 670px;
+	width: 1076px;
+}
+img.tablet_image
+{
+	position:absolute;
+	left: 50%;
+	margin-left: -555px;
+	margin-top: 64px;
+	z-index: 1;
+}
+div.tablet_Background
+{
+	position: absolute;
+	left: 50%;
+	margin-left: -545px;
+	background-color: #aba7cf;
+	border: 5px solid #aba7cf;
+	border-radius: 17px;
+	top: 100px;
+	height: 670px;
+	width: 1076px;
+}
+
+div.topNav
+{
+	position: absolute;
+	left:50%;
+	margin-left:-215px;
+	margin-top:160px;
+	z-index:2;
+	width: 630px;
+}
+div.topButton
+{
+	float:left;
+	opacity:0.5;
+	border-radius:7px;
+	background-image:url(Images/TopNav_Button_Shader.png);
+	width:125px;
+	height:29px;
+	font-size:24px;
+	color:#00F;
+}
+div.topButton:hover
+{	background-color:#0C0;}
+div.topButton:active
+{
+	background-color:#9F6;
+	box-shadow: 0px 0px 20px #FF9;
+}
+div.screen
+{
+	position: absolute;
+	left:50%;
+	margin-left:-400px;
+	margin-top:193px;
+	z-index: 2;
+	width: 817px;
+	height:508px;
+	border-radius:10px;
+}
+iframe.gallery
+{
+	position: absolute;
+	z-index: 2;
+	margin-left: -407.5px;
+	width: 813px;
+	height:504px;
+	border-radius:10px;
+}
+img.slideShowImage1, img.slideShowImage2
+{
+	position: absolute;
+	margin-left: -407.5px;
+	width:100%;
+	z-index: 3;
+	border-radius:10px;
+}
+img.slideShowImage2
+{	z-index:4;}
+
+div.infoPanel
+{
+	position: absolute;
+	margin-top: 414px;
+	z-index: 5;
+	background-color: #666;
+	border-top:3px solid #333;
+	border-radius:10px;
+	width: 817px;
+	height: 91px;
+}
+p.infoText
+{
+	color:#FFF;
+	font-size:20px;
+	font-weight:bold;
+	text-align:center;
+	margin:0px;
+}

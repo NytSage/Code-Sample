@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <script src="FadeShow_BuildGallery.js"></script>
+        <script src="ColorShift.js"></script>
+    </head>
+    
+    <body onLoad="StartSlideShow('slideShowImage1', 'slideShowImage2', 35, 35); StartColorShift('tablet_Background', 1);">
+        <div class="container">
+            <img class="title" src="Images/Title.png" alt="Title" align="middle"><br>
+            <div class="tablet">
+                <img class="tablet_image" src="Images/Tablet.png" alt="Tablet">
+                <div class="tablet_Background" onload=></div>
+                
+                <div class="topNav">
+                    <a href="index_Tab.html"><div class="topButton" style="background-color:#0C0"><b>Home</b></div></a>
+                    <a href="gallery_Tab.html"><div class="topButton"><b>Gallery</b></div></a>
+                    <a href=""><div class="topButton"><b>Contact</b></div></a>
+                    <a href=""><div class="topButton"><b>T.o.S</b></div></a>
+                    <a href=""><div class="topButton"><b>Prices</b></div></a>
+                </div>
+                <div class="screen">  
+                    <img class="slideShowImage1" src="" alt="SlideShowImage1">
+                    <img class="slideShowImage2" src="" alt="SlideShowImage2">
+                    
+                    <div class="infoPanel" onmouseover="StartMouseHoverFade(this, 1, 5)" onmouseout="StartMouseHoverFade(this, 0.5, 5)" style="opacity:0.5">
+                    <p class="infoText"><u>Welcome to Zeliv's Oasis</u></p>
+                    <p class="infoText" style="font-size:18px">Info goes here</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
