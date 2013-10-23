@@ -14,6 +14,7 @@ var picture = new Array();
 	picture[7] = "Gallery/PlumpCat.png";
 	picture[8] = "Gallery/SaberFlappy.png";
 	picture[9] = "Gallery/Sparkles.jpg";
+	
 var waitTimer = 0;
 
 var imageArea1 = new Object();
