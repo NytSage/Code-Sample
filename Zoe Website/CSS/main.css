@@ -12,7 +12,7 @@ div.container
 img.title
 {
 	position:absolute;
-	margin-left:-115.5;
+	margin-left:-200px;
 	left: 50%;
 }
 div.tablet
@@ -79,7 +79,7 @@ div.screen
 	height:508px;
 	border-radius:10px;
 }
-iframe.gallery
+iframe.screen
 {
 	position: absolute;
 	z-index: 2;
@@ -87,6 +87,7 @@ iframe.gallery
 	width: 813px;
 	height:504px;
 	border-radius:10px;
+	color:#FFFFFF;
 }
 img.slideShowImage1, img.slideShowImage2
 {
@@ -117,4 +118,10 @@ p.infoText
 	font-weight:bold;
 	text-align:center;
 	margin:0px;
+}
+img.prices
+{
+	width: 817px;
+	height:508px;
+	border-radius:10px;
 }
