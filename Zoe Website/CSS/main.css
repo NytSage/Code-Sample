@@ -55,7 +55,7 @@ div.topButton
 	float:left;
 	opacity:0.5;
 	border-radius:7px;
-	background-image:url(Images/TopNav_Button_Shader.png);
+	background-image:url(../Icons/TopNav_Button_Shader.png);
 	width:125px;
 	height:29px;
 	font-size:24px;
