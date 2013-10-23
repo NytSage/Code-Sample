@@ -8,6 +8,12 @@ var picture = new Array();
 	picture[2] = "Gallery/PlumpCat.png";
 	picture[3] = "Gallery/SaberFlappy.png";
 	picture[4] = "Gallery/Sparkles.jpg";
+	
+	picture[5] = "Gallery/Barky.jpg";
+	picture[6] = "Gallery/HalfDog.jpg";
+	picture[7] = "Gallery/PlumpCat.png";
+	picture[8] = "Gallery/SaberFlappy.png";
+	picture[9] = "Gallery/Sparkles.jpg";
 var waitTimer = 0;
 
 var imageArea1 = new Object();
@@ -146,13 +152,13 @@ function BuildGallery()
 		galleryImage.push(img);
 		
 		galleryImage[i].src = picture[i];
-		galleryImage[i].widthOriginal = img.style.width;
-		galleryImage[i].heightOriginal = img.style.height; //PROBLEM HERE! Original sizes "" or 0
-		galleryImage[i].width = 128;
-		galleryImage[i].height = 128;
-		galleryImage[i].widthHolder = 128;
-		galleryImage[i].heightHolder = 128;
-		galleryImage[i].style.padding = "10px";
+		galleryImage[i].widthOriginal = img.width;
+		galleryImage[i].heightOriginal = img.height;
+		galleryImage[i].widthSmall = 140;
+		galleryImage[i].heightSmall = 140;
+		galleryImage[i].width = galleryImage[i].widthSmall;
+		galleryImage[i].height = galleryImage[i].heightSmall;
+		galleryImage[i].style.padding = "5px";
 		galleryImage[i].alt = "image" + i;
 		galleryImage[i].style.cssFloat = "left";
 		galleryImage[i].style.border = "3px ridge #666";
@@ -170,16 +176,14 @@ function Grow(imageID)
 {
 	if(!imageID.isExpanded)
 	{
-		imageID.width = 154; 
-		imageID.height = 154;
+		imageID.style.backgroundColor = "#FFFF00"; 
 	}
 }
 function Shrink(imageID)
 {
 	if(!imageID.isExpanded)
 	{
-		imageID.width = 128;
-		imageID.height = 128;
+		imageID.style.backgroundColor = "#000000"; 
 	}
 }
 function PickUp_PutBack(imageID)
@@ -191,14 +195,15 @@ function PickUp_PutBack(imageID)
 		imageID.style.zIndex = 1;
 		imageID.style.left = "0";
 		imageID.style.top = "0";
-		imageID.width = imageID.widthHolder;
-		imageID.height = imageID.heightHolder;
+		imageID.width = imageID.widthSmall;
+		imageID.height = imageID.heightSmall;
 		backBlocker.style.zIndex = -1;
 		
 		imageID.isExpanded = false;
 	}
 	else
-	{		
+	{	
+		imageID.style.backgroundColor = "#000000"; 	
 		imageID.style.position = "absolute";
 		imageID.style.zIndex = 3;
 		imageID.style.left = "0";
@@ -210,8 +215,8 @@ function PickUp_PutBack(imageID)
 		}
 		else
 		{	
-			imageID.height = 504;
-			imageID.width = 504 * (imageID.widthOriginal / imageID.heightOriginal);
+			imageID.height = 475;
+			imageID.width = 475 * (imageID.widthOriginal / imageID.heightOriginal);
 		}
 		backBlocker.style.zIndex = 2;
 		

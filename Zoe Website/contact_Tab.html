@@ -4,6 +4,33 @@
         <link rel="stylesheet" type="text/css" href="CSS/main.css">
         <script src="JS/FadeShow_BuildGallery.js"></script>
         <script src="JS/ColorShift.js"></script>
+		
+		<style>
+			img.portrait
+			{
+				position: absolute;
+				left:25px;
+				top:25px;
+				border:5px ridge #F00;
+				border-radius:10px;
+				height:300px;
+			}
+			div.contactInfo
+			{
+				position: absolute;
+				left:300px;
+				top:0px;
+				float:left;
+				text-align:left;
+			}
+			textarea.msg
+			{
+				width:400px;
+				height:200px;
+				max-width:500px;
+				max-height:250px;
+			}
+		</style>
     </head>
     
     <body onLoad="StartSlideShow('slideShowImage1', 'slideShowImage2', 35, 35);">
@@ -20,9 +47,22 @@
                     <a href="tos_Tab.html"><div class="topButton"><b>T.o.S</b></div></a>
                     <a href="prices_Tab.html"><div class="topButton"><b>Prices</b></div></a>
                 </div>
-                <div class="screen">  
+                <div class="screen">
+					<img class="portrait" src="Icons/Zeliv Portrait.png" alt="Zeliv picture">
 					
-                </div>
+					<div class="contactInfo">
+						<h1>Zeliv </h1>
+						<p><a href="http://www.furaffinity.net/user/zeliv/" class="link" target="_blank">www.furaffinity.net</a><br>
+						zoemnx@gmail.com</p>
+						<form>
+							Name: <input type="text" name="clientName" style="width:350px"><br>
+							Subject: <input type="text" name="msgSubject" style="width:341px"><br>
+							Message<br>
+							<textarea class="msg" name="msg" wrap="hard"></textarea><br>
+							<input type="submit" name="submit">
+						</form>
+					</div>
+				</div>
             </div>
         </div>
     </body>

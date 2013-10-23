@@ -78,6 +78,7 @@ div.screen
 	width: 817px;
 	height:508px;
 	border-radius:10px;
+	color:#FFFFFF;
 }
 iframe.screen
 {
@@ -87,7 +88,6 @@ iframe.screen
 	width: 813px;
 	height:504px;
 	border-radius:10px;
-	color:#FFFFFF;
 }
 img.slideShowImage1, img.slideShowImage2
 {
@@ -119,6 +119,11 @@ p.infoText
 	text-align:center;
 	margin:0px;
 }
+a.link:link {color:#5555FF;}
+a.link:visited {color:#5555FF;}
+a.link:hover {color:#0C0;}
+a.link:active {color:#9F6;}
+
 img.prices
 {
 	width: 817px;
