@@ -150,42 +150,37 @@ function BuildGallery()
     for(var i = 0; i < picture.length; i++)
 	{
     	var img = document.createElement("img");
-		galleryImage.push(img);
 		
-		galleryImage[i].src = picture[i];
-		galleryImage[i].widthOriginal = img.width;
-		galleryImage[i].heightOriginal = img.height;
-		galleryImage[i].widthSmall = 140;
-		galleryImage[i].heightSmall = 140;
-		galleryImage[i].width = galleryImage[i].widthSmall;
-		galleryImage[i].height = galleryImage[i].heightSmall;
-		galleryImage[i].style.padding = "5px";
-		galleryImage[i].alt = "image" + i;
-		galleryImage[i].style.cssFloat = "left";
-		galleryImage[i].style.border = "3px ridge #666";
-		galleryImage[i].style.zIndex = 1;
-		galleryImage[i].isExpanded = false;
+		img.src = picture[i];
+		img.widthSmall = 140;
+		img.heightSmall = 140;
+		img.width = img.widthSmall;
+		img.height = img.heightSmall;
+		img.style.padding = "5px";
+		img.alt = "image" + i;
+		img.style.cssFloat = "left";
+		img.style.border = "3px ridge #666";
+		img.style.zIndex = 1;
+		img.isExpanded = false;
+		
+		galleryImage.push(img);
 		document.body.appendChild(galleryImage[i]);
 		
-		galleryImage[i].addEventListener("mouseover", function() {Grow(this);},false);
-		galleryImage[i].addEventListener("mouseout", function() {Shrink(this);},false);
+		galleryImage[i].addEventListener("mouseover", function() {Glow(this);},false);
+		galleryImage[i].addEventListener("mouseout", function() {EndGlow(this);},false);
 		galleryImage[i].addEventListener("click", function() {PickUp_PutBack(this);},false);
 	}
 }
 
-function Grow(imageID)
+function Glow(imageID)
 {
 	if(!imageID.isExpanded)
-	{
-		imageID.style.backgroundColor = "#FFFF00"; 
-	}
+	{	imageID.style.backgroundColor = "#FFFF00";}
 }
-function Shrink(imageID)
+function EndGlow(imageID)
 {
 	if(!imageID.isExpanded)
-	{
-		imageID.style.backgroundColor = "#000000"; 
-	}
+	{	imageID.style.backgroundColor = "#000000";}
 }
 function PickUp_PutBack(imageID)
 {
@@ -209,15 +204,15 @@ function PickUp_PutBack(imageID)
 		imageID.style.zIndex = 3;
 		imageID.style.left = "0";
 		imageID.style.top = "0";
-		if(imageID.widthOriginal < imageID.heightOriginal)
+		if(imageID.naturalWidth < imageID.naturalHeight)
 		{	
 			imageID.width = 813;
-			imageID.height = 813 * (imageID.heightOriginal / imageID.widthOriginal);
+			imageID.height = 813 * (imageID.naturalHeight / imageID.naturalWidth);
 		}
 		else
 		{	
 			imageID.height = 475;
-			imageID.width = 475 * (imageID.widthOriginal / imageID.heightOriginal);
+			imageID.width = 475 * (imageID.naturalWidth / imageID.naturalHeight);
 		}
 		backBlocker.style.zIndex = 2;
 		
