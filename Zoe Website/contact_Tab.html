@@ -2,8 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="CSS/main.css">
-        <script src="JS/FadeShow_BuildGallery.js"></script>
-        <script src="JS/ColorShift.js"></script>
+		<script src="JS/SendEmail.js"></script>
 		
 		<style>
 			img.portrait
@@ -23,7 +22,7 @@
 				float:left;
 				text-align:left;
 			}
-			textarea.msg
+			textarea.EMsg
 			{
 				width:400px;
 				height:200px;
@@ -52,14 +51,14 @@
 					
 					<div class="contactInfo">
 						<h1>Zeliv </h1>
-						<p><a href="http://www.furaffinity.net/user/zeliv/" class="link" target="_blank">www.furaffinity.net</a><br>
+						<p><a href="http://www.furaffinity.net/newpm/zeliv/" class="link" target="_blank">www.furaffinity.net</a><br>
 						zoemnx@gmail.com</p>
-						<form>
-							Name: <input type="text" name="clientName" style="width:350px"><br>
-							Subject: <input type="text" name="msgSubject" style="width:341px"><br>
+						<form name="contactForm" onsubmit="return validateForm();" action="mailto:zoemnx@gmail.com?subject=Oasis Q%2FC" method="post" enctype="text/plain">
+							Name: <input type="text" name="Name" style="width:350px"><br>
+							Subject: <input type="text" name="Subject" style="width:341px"><br>
 							Message<br>
-							<textarea class="msg" name="msg" wrap="hard"></textarea><br>
-							<input type="submit" name="submit">
+							<textarea name="Message" wrap="hard" style="width:400px; height:200px;"></textarea><br>
+							<input type="submit" value="Submit">
 						</form>
 					</div>
 				</div>
